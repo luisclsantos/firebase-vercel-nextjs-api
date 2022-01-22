@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { doc, getDoc, collection, query, where, getDocs,} from "firebase/firestore";
+import { doc, getDoc} from "firebase/firestore";
 
 //Firebase Environment Variables
 const apiKey = process.env.FIREBASE_API_KEY;
@@ -31,13 +31,13 @@ const db = getFirestore();
 
 export default async function Recados(request, response) {
   //Query many docs with conditions
-  const q = query(collection(db, "recados"), where("completed", "==", false));
+  /*const q = query(collection(db, "recados"), where("completed", "==", false));
 
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
     console.log(doc.id, " => ", doc.data());
-  });
+  });*/
 
   //pegando o valor recebido dinamicamente pelo path site.com/api/produtos/1/
   //(onde 1 é o valor exemplo recebido dinamicamente)
@@ -48,7 +48,7 @@ export default async function Recados(request, response) {
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
-    var title = docSnap.data().title;
+    var title = await docSnap.data().title;
   } else {
     // doc.data() will be undefined in this case
     console.log("No such document!");
