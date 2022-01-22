@@ -1,0 +1,27 @@
+{
+  "name": "firebase-vercel-nextjs-api",
+  "version": "1.0.0",
+  "description": "API com NextJS, Vercel e com integração com Firebase",
+  "main": "index.js",
+  "dependencies": {
+    "firebase": "^9.6.4",
+    "next": "^12.0.8",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiscarlima/firebase-vercel-nextjs-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luiscarlima/firebase-vercel-nextjs-api/issues"
+  },
+  "homepage": "https://github.com/luiscarlima/firebase-vercel-nextjs-api#readme"
+}
